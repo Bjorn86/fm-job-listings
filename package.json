@@ -1,7 +1,18 @@
 {
-  "name": "cra-template",
+  "name": "fm-job-listings",
   "version": "0.1.0",
+  "description": "Job board with filtering",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bjorn86/fm-job-listings.git"
+  },
+  "author": "Danila Legkobytov <legkobytov-danila@yandex.ru>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bjorn86/fm-job-listings/issues"
+  },
+  "homepage": "https://bjorn86.github.io/fm-job-listings/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -10,7 +21,9 @@
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-redux": "^8.1.2",
     "react-scripts": "5.0.1",
+    "redux": "^4.2.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
