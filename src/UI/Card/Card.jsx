@@ -1,14 +1,14 @@
 // IMPORT PACKAGES
-import PropTypes from "prop-types";
-import clsx from "clsx";
-import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
+import clsx from 'clsx';
+import { Link } from 'react-router-dom';
 
 // IMPORT STYLES
-import "./Card.scss";
+import './Card.scss';
 
 // IMPORT COMPONENTS
-import Stack from "../Stack/Stack";
-import Badge from "../Badge/Badge";
+import Stack from '../Stack/Stack';
+import Badge from '../Badge/Badge';
 
 // CARD COMPONENT
 function Card({
@@ -30,59 +30,59 @@ function Card({
   const badges = [].concat(role, level, ...languages, ...tools);
 
   return (
-    <li className={clsx("card", { card_type_featured: featured })}>
-      <article className="card__wrapper">
-        <div className="card__info-wrapper">
+    <li className={clsx('card', { card_type_featured: featured })}>
+      <article className='card__wrapper'>
+        <div className='card__info-wrapper'>
           <img
             src={process.env.PUBLIC_URL + logo}
             alt={`${company} logotype`}
-            className="card__company-logo"
+            className='card__company-logo'
           />
-          <div className="card__vacancy-wrapper">
-            <div className="card__company">
-              <h3 className="card__company-name">{company}</h3>
+          <div className='card__vacancy-wrapper'>
+            <div className='card__company'>
+              <h3 className='card__company-name'>{company}</h3>
               {(isNew || featured) && (
-                <Stack variant="rounded">
+                <Stack variant='rounded'>
                   {isNew && (
                     <Badge
-                      variant="rounded"
-                      colorScheme="primary"
-                      text="new!"
+                      variant='rounded'
+                      colorScheme='primary'
+                      text='new!'
                     />
                   )}
                   {featured && (
                     <Badge
-                      variant="rounded"
-                      colorScheme="dark"
-                      text="featured"
+                      variant='rounded'
+                      colorScheme='dark'
+                      text='featured'
                     />
                   )}
                 </Stack>
               )}
             </div>
-            <div className="card__meta-wrapper">
-              <Link to={`/${id}`} className="card__link">
-                <h2 className="card__position">{position}</h2>
+            <div className='card__meta-wrapper'>
+              <Link to={`/${id}`} className='card__link'>
+                <h2 className='card__position'>{position}</h2>
               </Link>
-              <ul className="card__meta-list">
-                <li className="card__meta-item">
-                  <p className="card__meta-text">{postedAt}</p>
+              <ul className='card__meta-list'>
+                <li className='card__meta-item'>
+                  <p className='card__meta-text'>{postedAt}</p>
                 </li>
-                <li className="card__meta-item">
-                  <p className="card__meta-text">{contract}</p>
+                <li className='card__meta-item'>
+                  <p className='card__meta-text'>{contract}</p>
                 </li>
-                <li className="card__meta-item">
-                  <p className="card__meta-text">{location}</p>
+                <li className='card__meta-item'>
+                  <p className='card__meta-text'>{location}</p>
                 </li>
               </ul>
             </div>
           </div>
         </div>
-        <Stack variant="basic">
+        <Stack variant='basic'>
           {badges.map((badge) => (
             <Badge
-              variant="basic"
-              colorScheme="light"
+              variant='basic'
+              colorScheme='light'
               text={badge}
               key={badge}
             />

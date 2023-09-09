@@ -1,19 +1,19 @@
-import Stack from "../Stack/Stack";
-import Badge from "./Badge";
+import Stack from '../Stack/Stack';
+import Badge from './Badge';
 
 export default {
-  title: "Badge",
+  title: 'Badge',
   component: Badge,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
     variant: {
-      description: "Badge variant",
+      description: 'Badge variant',
     },
     colorScheme: {
-      description: "Badge color scheme",
+      description: 'Badge color scheme',
     },
     text: {
-      description: "Badge text",
+      description: 'Badge text',
     },
   },
 };
@@ -26,28 +26,28 @@ const Template = (args) => (
 
 export const Basic = Template.bind({});
 Basic.args = {
-  variant: "basic",
-  colorScheme: "light",
-  text: "React",
+  variant: 'basic',
+  colorScheme: 'light',
+  text: 'React',
 };
 
 export const Removable = Template.bind({});
 Removable.args = {
-  variant: "removable",
-  colorScheme: "light",
-  text: "JavaScript",
+  variant: 'removable',
+  colorScheme: 'light',
+  text: 'JavaScript',
 };
 
 export const RoundedPrimary = Template.bind({});
 RoundedPrimary.args = {
-  variant: "rounded",
-  colorScheme: "primary",
-  text: "new!",
+  variant: 'rounded',
+  colorScheme: 'primary',
+  text: 'new!',
 };
 
 export const RoundedDark = Template.bind({});
 RoundedDark.args = {
-  variant: "rounded",
-  colorScheme: "dark",
-  text: "featured",
+  variant: 'rounded',
+  colorScheme: 'dark',
+  text: 'featured',
 };

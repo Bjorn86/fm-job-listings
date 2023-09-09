@@ -1,6 +1,6 @@
 @mixin font-main($size, $color, $weight, $lh: false, $ls: false) {
   font: {
-    family: "League Spartan", Helvetica, Arial, sans-serif;
+    family: 'League Spartan', Helvetica, Arial, sans-serif;
     size: $size;
     weight: $weight;
   }

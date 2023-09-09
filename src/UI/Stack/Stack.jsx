@@ -1,8 +1,8 @@
 // IMPORT PACKAGES
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // IMPORT STYLES
-import "./Stack.scss";
+import './Stack.scss';
 
 // STACK COMPONENT
 function Stack({ children, variant }) {
@@ -13,5 +13,5 @@ export default Stack;
 
 Stack.propTypes = {
   children: PropTypes.node.isRequired,
-  variant: PropTypes.oneOf(["basic", "removable", "rounded"]).isRequired,
+  variant: PropTypes.oneOf(['basic', 'removable', 'rounded']).isRequired,
 };

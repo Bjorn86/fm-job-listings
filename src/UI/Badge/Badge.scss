@@ -1,5 +1,5 @@
-@import "../../styles/mixins";
-@import "../../styles/variables";
+@import '../../styles/mixins';
+@import '../../styles/variables';
 
 .badge {
   &_type_div {
@@ -51,7 +51,7 @@
     border: none;
     border-radius: 0 $br-small $br-small 0;
     background:
-      url("../../assets/icons/icon-remove.svg") center center/12px no-repeat,
+      url('../../assets/icons/icon-remove.svg') center center/12px no-repeat,
       $color-desaturated-dark-cyan;
     cursor: pointer;
     transition: background-color 0.3s ease;
