@@ -1,0 +1,82 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.card {
+  width: 100%;
+  margin-bottom: 26px;
+  border-radius: $br-small;
+  border-left: 5px solid transparent;
+  box-shadow: $shadow;
+  &_type_featured {
+    border-left-color: $color-desaturated-dark-cyan;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 31px 38px 31px 35px;
+    box-sizing: border-box;
+  }
+  &__info-wrapper {
+    display: flex;
+    gap: 23px;
+  }
+  &__company-logo {
+    width: 88px;
+    height: 88px;
+  }
+  &__vacancy-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  &__company {
+    min-height: 23px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  &__company-name {
+    margin: 0;
+    @include font-main($textXL, $color-desaturated-dark-cyan, 700, 1);
+  }
+  &__meta-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  &__link {
+    text-decoration: none;
+  }
+  &__position {
+    margin: 0;
+    @include font-main($textXXL, $color-very-dark-grayish-cyan, 700, 1);
+    transition: color 0.3s ease;
+    &:hover {
+      color: $color-desaturated-dark-cyan;
+    }
+  }
+  &__meta-list {
+    padding: 0;
+    list-style: none;
+    display: flex;
+  }
+  &__meta-item:not(:last-child) {
+    position: relative;
+    margin-right: 35px;
+  }
+  &__meta-item:not(:last-child)::after {
+    content: "";
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    top: calc(50% - 2px);
+    right: calc(-37px / 2);
+    background-color: $color-dark-grayish-cyan;
+    border-radius: $br-full;
+  }
+  &__meta-text {
+    margin: 0;
+    @include font-main($textL, $color-dark-grayish-cyan, 500, 1, 1px);
+  }
+}

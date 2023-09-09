@@ -1,0 +1,62 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.badge {
+  &_type_div {
+    display: flex;
+  }
+  &_type_button {
+    padding: 10px 11px 8px;
+    border: none;
+    border-radius: $br-small;
+    background-color: $color-light-grayish-cyan;
+    @include font-main($textM, $color-desaturated-dark-cyan, 700, 1, 0.3px);
+    cursor: pointer;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
+    &:hover {
+      background-color: $color-desaturated-dark-cyan;
+      color: $color-light-grayish-cyan;
+    }
+  }
+  &__tag {
+    user-select: none;
+    @include font-main($textXS, $color-desaturated-dark-cyan, 700, 1, 0.3px);
+    &_variant_removable {
+      padding: 10px 10px 7px;
+      border-radius: $br-small 0 0 $br-small;
+      font-size: $textM;
+    }
+    &_variant_rounded {
+      padding: 7px 9px 3px;
+      border-radius: $br-medium;
+      text-transform: uppercase;
+    }
+    &_color-scheme_light {
+      background-color: $color-light-grayish-cyan;
+    }
+    &_color-scheme_primary {
+      background-color: $color-desaturated-dark-cyan;
+      color: $color-bg-light-grayish-cyan;
+    }
+    &_color-scheme_dark {
+      background-color: $color-very-dark-grayish-cyan;
+      color: $color-bg-light-grayish-cyan;
+    }
+  }
+  &__remove-btn {
+    width: 32px;
+    height: 100%;
+    border: none;
+    border-radius: 0 $br-small $br-small 0;
+    background:
+      url("../../assets/icons/icon-remove.svg") center center/12px no-repeat,
+      $color-desaturated-dark-cyan;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    &:hover {
+      background-color: $color-very-dark-grayish-cyan;
+    }
+  }
+}
