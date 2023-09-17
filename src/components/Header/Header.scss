@@ -1,0 +1,10 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.header {
+  min-height: 156px;
+  background:
+    url('../../assets/images/bg-header-desktop.svg') center center/cover
+      no-repeat,
+    $color-desaturated-dark-cyan;
+}
