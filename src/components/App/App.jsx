@@ -1,25 +1,22 @@
+// IMPORT PACKAGES
+import { Route, Routes } from 'react-router-dom';
+
 // IMPORT STYLES
 import './App.scss';
 
 // IMPORT COMPONENTS
-import Card from '../../UI/Card/Card';
-import Header from '../Header/Header';
-import Filter from '../Filter/Filter';
+import AppLayout from '../AppLayout/AppLayout';
 
 // OTHER IMPORTS
-import jobList from '../../assets/data/data.json';
+/* import data from '../../assets/data/data.json'; */
 
 // APP CORE COMPONENT
 function App() {
   return (
     <div className='app__content'>
-      <Header />
-      <Filter />
-      <ul style={{ width: '1105px' }}>
-        {jobList.map((job) => (
-          <Card key={job.id} {...job} />
-        ))}
-      </ul>
+      <Routes>
+        <Route path='/' element={<AppLayout />} />
+      </Routes>
     </div>
   );
 }
