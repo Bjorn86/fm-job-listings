@@ -2,11 +2,16 @@
 @import '../../styles/variables';
 
 .filter {
-  padding: 20px 38px;
+  max-width: 1110px;
+  width: 100%;
+  padding: 29px 40px;
+  margin: -36px auto 0;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   border-radius: $br-small;
+  background-color: $color-white;
+  box-shadow: $shadow;
   &__btn-clear {
     padding: 0;
     border: none;

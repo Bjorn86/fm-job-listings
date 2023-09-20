@@ -11,6 +11,7 @@ $color-desaturated-dark-cyan: hsl(180, 29%, 50%);
 $color-light-grayish-cyan: hsl(180, 31%, 95%);
 $color-dark-grayish-cyan: hsl(180, 8%, 52%);
 $color-very-dark-grayish-cyan: hsl(180, 14%, 20%);
+$color-white: hsl(0, 0%, 100%);
 $color-bg-light-grayish-cyan: hsl(180, 52%, 96%);
 
 /* BORDER RADIUS */
@@ -20,5 +21,5 @@ $br-full: 50%;
 
 /* SHADOW */
 $shadow:
-  rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
-  rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  rgba(91, 164, 164, 0.25) 0px 6px 12px -2px,
+  rgba(44, 58, 58, 0.3) 0px 3px 7px -3px;

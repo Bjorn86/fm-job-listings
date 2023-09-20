@@ -3,10 +3,12 @@
 
 .card {
   width: 100%;
+  box-sizing: border-box;
   margin-bottom: 26px;
   border-radius: $br-small;
   border-left: 5px solid transparent;
   box-shadow: $shadow;
+  background-color: $color-white;
   &_type_featured {
     border-left-color: $color-desaturated-dark-cyan;
   }

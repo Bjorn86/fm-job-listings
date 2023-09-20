@@ -5,17 +5,20 @@ import { Route, Routes } from 'react-router-dom';
 import './App.scss';
 
 // IMPORT COMPONENTS
-import AppLayout from '../AppLayout/AppLayout';
+import PageContent from '../PageContent/PageContent';
+import JobList from '../JobList/JobList';
 
 // OTHER IMPORTS
-/* import data from '../../assets/data/data.json'; */
+import data from '../../assets/data/data.json';
 
 // APP CORE COMPONENT
 function App() {
   return (
     <div className='app__content'>
       <Routes>
-        <Route path='/' element={<AppLayout />} />
+        <Route path='/*' element={<PageContent />}>
+          <Route index element={<JobList data={data} />} />
+        </Route>
       </Routes>
     </div>
   );

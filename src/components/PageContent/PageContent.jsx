@@ -2,26 +2,25 @@
 import { Outlet, Route, Routes } from 'react-router-dom';
 
 // IMPORT STYLES
-import './AppLayout.scss';
+import './PageContent.scss';
 
 // IMPORT COMPONENTS
 import Header from '../Header/Header';
-import Main from '../Main/Main';
 import Filter from '../Filter/Filter';
 
-// PAGE CONTENT COMPONENT
-function AppLayout() {
+// APP LAYOUT COMPONENT
+function PageContent() {
   return (
     <>
       <Header />
-      <Main>
+      <main className='page-content'>
         <Routes>
           <Route path='/' element={<Filter />} />
         </Routes>
         <Outlet />
-      </Main>
+      </main>
     </>
   );
 }
 
-export default AppLayout;
+export default PageContent;
