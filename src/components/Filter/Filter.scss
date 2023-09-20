@@ -1,0 +1,20 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.filter {
+  padding: 20px 38px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  border-radius: $br-small;
+  &__btn-clear {
+    padding: 0;
+    border: none;
+    @include font-main($textM, $color-desaturated-dark-cyan, 700, 1, 0.3px);
+    background-color: transparent;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
