@@ -12,6 +12,10 @@ function Stack({ children, variant }) {
 export default Stack;
 
 Stack.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   variant: PropTypes.oneOf(['basic', 'removable', 'rounded']).isRequired,
+};
+
+Stack.defaultProps = {
+  children: null,
 };

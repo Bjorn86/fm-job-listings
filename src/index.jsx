@@ -1,6 +1,7 @@
 // IMPORT PACKAGES
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { Provider } from 'react-redux';
 import { HashRouter } from 'react-router-dom';
 
 // IMPORT STYLES
@@ -9,11 +10,16 @@ import './index.scss';
 // IMPORT COMPONENTS
 import App from './components/App/App';
 
+// IMPORT STORE
+import store from './store';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <HashRouter>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </HashRouter>,
+  <Provider store={store}>
+    <HashRouter>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </HashRouter>
+  </Provider>,
 );
