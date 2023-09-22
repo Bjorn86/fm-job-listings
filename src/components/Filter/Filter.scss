@@ -4,7 +4,7 @@
 .filter {
   max-width: 1110px;
   width: 100%;
-  padding: 29px 40px;
+  padding: 19px 40px;
   margin: -36px auto 0;
   box-sizing: border-box;
   display: flex;
@@ -15,10 +15,12 @@
   &__btn-clear {
     padding: 0;
     border: none;
-    @include font-main($textM, $color-desaturated-dark-cyan, 700, 1, 0.3px);
+    @include font-main($textM, $color-very-dark-grayish-cyan, 700, 1, 0.3px);
     background-color: transparent;
     cursor: pointer;
+    transition: color 0.3s ease;
     &:hover {
+      color: $color-desaturated-dark-cyan;
       text-decoration: underline;
     }
   }

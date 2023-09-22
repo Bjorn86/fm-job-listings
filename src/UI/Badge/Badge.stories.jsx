@@ -15,6 +15,12 @@ export default {
     text: {
       description: 'Badge text',
     },
+    onClear: {
+      description: 'Callback for removing the badge',
+    },
+    onclick: {
+      description: 'Callback for clicking the badge',
+    },
   },
 };
 
@@ -29,6 +35,7 @@ Basic.args = {
   variant: 'basic',
   colorScheme: 'light',
   text: 'React',
+  onclick: () => {},
 };
 
 export const Removable = Template.bind({});
@@ -36,6 +43,7 @@ Removable.args = {
   variant: 'removable',
   colorScheme: 'light',
   text: 'JavaScript',
+  onClear: () => {},
 };
 
 export const RoundedPrimary = Template.bind({});

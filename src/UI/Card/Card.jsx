@@ -25,6 +25,7 @@ function Card({
   location,
   languages,
   tools,
+  addFilter,
 }) {
   // OTHER VARIABLES
   const badges = [].concat(role, level, ...languages, ...tools);
@@ -85,6 +86,7 @@ function Card({
               colorScheme='light'
               text={badge}
               key={badge}
+              onClick={() => addFilter(badge)}
             />
           ))}
         </Stack>
@@ -109,4 +111,5 @@ Card.propTypes = {
   location: PropTypes.string.isRequired,
   languages: PropTypes.arrayOf(PropTypes.string).isRequired,
   tools: PropTypes.arrayOf(PropTypes.string).isRequired,
+  addFilter: PropTypes.func.isRequired,
 };

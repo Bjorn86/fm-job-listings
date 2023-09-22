@@ -10,4 +10,8 @@
   &_variant_rounded {
     gap: 12px;
   }
+  &_variant_removable {
+    min-height: 32px;
+    gap: 13px;
+  }
 }

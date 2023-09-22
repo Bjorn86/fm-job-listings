@@ -6,7 +6,10 @@ import { ACTIONS_TYPE } from '../../utils/constants';
 export const filterReducer = (state = [], action) => {
   switch (action.type) {
     case ACTIONS_TYPE.addFilter: {
-      return [...state, action.filter];
+      if (!state.includes(action.filter)) {
+        return [...state, action.filter];
+      }
+      return state;
     }
     case ACTIONS_TYPE.removeFilter: {
       return state.filter((filter) => filter !== action.filter);

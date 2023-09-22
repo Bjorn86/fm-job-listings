@@ -46,6 +46,9 @@ export default {
     tools: {
       description: 'The list of tools needed in the work',
     },
+    addFilter: {
+      description: 'Callback for adding a filter',
+    },
   },
 };
 
@@ -72,6 +75,7 @@ Basic.args = {
   location: 'USA Only',
   languages: ['JavaScript'],
   tools: ['React', 'Sass'],
+  addFilter: () => {},
 };
 
 export const Featured = Template.bind({});
@@ -89,4 +93,5 @@ Featured.args = {
   location: 'Remote',
   languages: ['Python'],
   tools: ['React'],
+  addFilter: () => {},
 };

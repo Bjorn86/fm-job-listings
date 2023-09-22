@@ -5,23 +5,9 @@ import PropTypes from 'prop-types';
 import './Badge.scss';
 
 // BADGE COMPONENT
-function Badge({ variant, colorScheme, text }) {
-  // HANDLER BADGE CLICK
-  function handleClick() {
-    console.log('clicked');
-  }
-
-  // HANDLER BADGE REMOVE
-  function handleRemove() {
-    console.log('clear');
-  }
-
+function Badge({ variant, colorScheme, text, onClear, onClick }) {
   return variant === 'basic' ? (
-    <button
-      className='badge badge_type_button'
-      type='button'
-      onClick={handleClick}
-    >
+    <button className='badge badge_type_button' type='button' onClick={onClick}>
       {text}
     </button>
   ) : (
@@ -36,7 +22,7 @@ function Badge({ variant, colorScheme, text }) {
           className='badge__remove-btn'
           type='button'
           aria-label='Delete'
-          onClick={handleRemove}
+          onClick={onClear}
         />
       )}
     </div>
@@ -49,4 +35,11 @@ Badge.propTypes = {
   variant: PropTypes.oneOf(['basic', 'removable', 'rounded']).isRequired,
   colorScheme: PropTypes.oneOf(['light', 'primary', 'dark']).isRequired,
   text: PropTypes.string.isRequired,
+  onClear: PropTypes.func,
+  onClick: PropTypes.func,
+};
+
+Badge.defaultProps = {
+  onClear: () => {},
+  onClick: () => {},
 };
