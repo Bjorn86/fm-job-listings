@@ -4,11 +4,13 @@
 .card {
   width: 100%;
   box-sizing: border-box;
-  margin-bottom: 26px;
   border-radius: $br-small;
   border-left: 5px solid transparent;
   box-shadow: $shadow;
   background-color: $color-white;
+  /* &:not(:last-child) {
+    margin-bottom: 26px;
+  } */
   &_type_featured {
     border-left-color: $color-desaturated-dark-cyan;
   }
@@ -16,6 +18,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
     padding: 31px 38px 31px 35px;
     box-sizing: border-box;
   }
@@ -80,5 +83,52 @@
   &__meta-text {
     margin: 0;
     @include font-main($textL, $color-dark-grayish-cyan, 500, 1, 1px);
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .card {
+    max-width: 327px;
+    /* margin-bottom: 0; */
+    &__wrapper {
+      padding: 0 16px 24px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &__info-wrapper {
+      margin-top: -24px;
+      margin-left: 3px;
+      flex-direction: column;
+      gap: 9px;
+    }
+    &__company-logo {
+      width: 47px;
+      height: 47px;
+    }
+    &__company {
+      gap: 24px;
+    }
+    &__company-name {
+      font-size: $textM;
+    }
+    &__meta-wrapper {
+      margin-top: 1px;
+      gap: 18px;
+    }
+    &__position {
+      font-size: $textM;
+    }
+    &__meta-item:not(:last-child) {
+      margin-right: 22px;
+    }
+    &__meta-item:not(:last-child)::after {
+      width: 3px;
+      height: 3px;
+      top: calc(50% - 1.5px);
+      right: calc(-22px / 2);
+    }
+    &__meta-text {
+      font-size: $textS;
+    }
   }
 }

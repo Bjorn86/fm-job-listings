@@ -20,6 +20,10 @@ function Filter() {
   const dispatch = useDispatch();
   const currentFilters = useSelector(selectFilters);
 
+  if (!currentFilters.length) {
+    return null;
+  }
+
   return (
     <section className='filter'>
       <Stack variant='removable'>

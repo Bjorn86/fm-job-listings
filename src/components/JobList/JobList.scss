@@ -1,10 +1,29 @@
 .job-list {
   max-width: 1110px;
   width: 100%;
-  margin: 44px auto 0;
+  margin: 43px auto 0;
+  &_no-filters {
+    margin-top: 78px;
+  }
   &__list {
     padding: 0;
     margin: 0;
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .job-list {
+    margin-top: 58px;
+    &_no-filters {
+      margin-top: 93px;
+    }
+    &__list {
+      gap: 41px;
+    }
   }
 }

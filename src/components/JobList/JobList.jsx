@@ -1,5 +1,6 @@
 // IMPORT PACKAGES
 import { useSelector, useDispatch } from 'react-redux';
+import clsx from 'clsx';
 
 // IMPORT STYLES
 import './JobList.scss';
@@ -29,7 +30,11 @@ function JobList() {
   };
 
   return (
-    <section className='job-list'>
+    <section
+      className={clsx('job-list', {
+        'job-list_no-filters': !currentFilters.length,
+      })}
+    >
       <ul className='job-list__list'>
         {positions.map((job) => (
           <Card key={job.id} addFilter={handleAddFilter} {...job} />

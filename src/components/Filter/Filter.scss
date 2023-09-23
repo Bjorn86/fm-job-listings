@@ -5,7 +5,7 @@
   max-width: 1110px;
   width: 100%;
   padding: 19px 40px;
-  margin: -36px auto 0;
+  margin: -35px auto 0;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
@@ -15,7 +15,7 @@
   &__btn-clear {
     padding: 0;
     border: none;
-    @include font-main($textM, $color-very-dark-grayish-cyan, 700, 1, 0.3px);
+    @include font-main($textM, $color-dark-grayish-cyan, 700, 1, 0.3px);
     background-color: transparent;
     cursor: pointer;
     transition: color 0.3s ease;
@@ -23,5 +23,13 @@
       color: $color-desaturated-dark-cyan;
       text-decoration: underline;
     }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .filter {
+    padding-right: 26px;
+    padding-left: 18px;
+    gap: 10px;
   }
 }

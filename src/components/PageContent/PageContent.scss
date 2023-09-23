@@ -3,6 +3,8 @@
 
 .page-content {
   max-width: 100%;
+  padding: 0 24px 24px;
+  box-sizing: border-box;
   background-color: $color-bg-light-grayish-cyan;
   flex: 1 1 auto;
 }

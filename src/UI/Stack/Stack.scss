@@ -15,3 +15,19 @@
     gap: 13px;
   }
 }
+
+@media screen and (max-width: 950px) {
+  .stack {
+    &_variant_basic {
+      padding-top: 15px;
+      border-top: 1px solid $color-light-grayish-cyan;
+      gap: 15px;
+    }
+    &_variant_rounded {
+      gap: 7px;
+    }
+    &_variant_removable {
+      gap: 16px;
+    }
+  }
+}
