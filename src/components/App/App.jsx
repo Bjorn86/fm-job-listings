@@ -1,7 +1,6 @@
 // IMPORT PACKAGES
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { Route, Routes } from 'react-router-dom';
 
 // IMPORT STYLES
 import './App.scss';
@@ -28,11 +27,9 @@ function App() {
 
   return (
     <div className='app__content'>
-      <Routes>
-        <Route path='/*' element={<PageContent />}>
-          <Route index element={<JobList />} />
-        </Route>
-      </Routes>
+      <PageContent>
+        <JobList />
+      </PageContent>
     </div>
   );
 }

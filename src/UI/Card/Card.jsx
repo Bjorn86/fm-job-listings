@@ -1,7 +1,6 @@
 // IMPORT PACKAGES
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import { Link } from 'react-router-dom';
 
 // IMPORT STYLES
 import './Card.scss';
@@ -12,7 +11,6 @@ import Badge from '../Badge/Badge';
 
 // CARD COMPONENT
 function Card({
-  id,
   company,
   logo,
   new: isNew,
@@ -62,9 +60,7 @@ function Card({
               )}
             </div>
             <div className='card__meta-wrapper'>
-              <Link to={`/${id}`} className='card__link'>
-                <h2 className='card__position'>{position}</h2>
-              </Link>
+              <h2 className='card__position'>{position}</h2>
               <ul className='card__meta-list'>
                 <li className='card__meta-item'>
                   <p className='card__meta-text'>{postedAt}</p>
@@ -98,7 +94,6 @@ function Card({
 export default Card;
 
 Card.propTypes = {
-  id: PropTypes.number.isRequired,
   company: PropTypes.string.isRequired,
   logo: PropTypes.string.isRequired,
   new: PropTypes.bool.isRequired,

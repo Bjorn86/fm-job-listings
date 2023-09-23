@@ -22,7 +22,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.1.2",
-    "react-router-dom": "^6.15.0",
     "react-scripts": "5.0.1",
     "redux": "^4.2.1",
     "web-vitals": "^2.1.4"
@@ -38,7 +37,9 @@
     "commit": "cz",
     "prepare": "husky install",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -111,6 +112,7 @@
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "eslint-plugin-storybook": "^0.6.13",
+    "gh-pages": "^6.0.0",
     "husky": "^8.0.0",
     "lint-staged": "^14.0.1",
     "prettier": "3.0.3",

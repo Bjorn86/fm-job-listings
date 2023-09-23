@@ -1,5 +1,5 @@
 // IMPORT PACKAGES
-import { Outlet, Route, Routes } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 // IMPORT STYLES
 import './PageContent.scss';
@@ -9,18 +9,24 @@ import Header from '../Header/Header';
 import Filter from '../Filter/Filter';
 
 // APP LAYOUT COMPONENT
-function PageContent() {
+function PageContent({ children }) {
   return (
     <>
       <Header />
       <main className='page-content'>
-        <Routes>
-          <Route path='/' element={<Filter />} />
-        </Routes>
-        <Outlet />
+        <Filter />
+        {children}
       </main>
     </>
   );
 }
 
 export default PageContent;
+
+PageContent.propTypes = {
+  children: PropTypes.node,
+};
+
+PageContent.defaultProps = {
+  children: null,
+};

@@ -1,4 +1,3 @@
-import { BrowserRouter } from 'react-router-dom';
 import Card from './Card';
 
 export default {
@@ -6,9 +5,6 @@ export default {
   component: Card,
   tags: ['autodocs'],
   argTypes: {
-    id: {
-      description: 'ID of the vacancy',
-    },
     company: {
       description: 'Company name',
     },
@@ -53,16 +49,13 @@ export default {
 };
 
 const Template = (args) => (
-  <BrowserRouter>
-    <ul style={{ listStyle: 'none', padding: 0 }}>
-      <Card {...args} />
-    </ul>
-  </BrowserRouter>
+  <ul style={{ listStyle: 'none', padding: 0 }}>
+    <Card {...args} />
+  </ul>
 );
 
 export const Basic = Template.bind({});
 Basic.args = {
-  id: 1,
   company: 'Account',
   logo: '/images/account.svg',
   new: true,
@@ -80,7 +73,6 @@ Basic.args = {
 
 export const Featured = Template.bind({});
 Featured.args = {
-  id: 2,
   company: 'Manage',
   logo: '/images/manage.svg',
   new: true,
