@@ -4,11 +4,27 @@ import { createStore } from 'redux';
 // IMPORT REDUCERS
 import { rootReducer } from './rootReducer';
 
-// STORE
-const store = createStore(
-  rootReducer,
-  // eslint-disable-next-line no-underscore-dangle
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
-);
+// IMPORT UTILS
+import { loadState, saveState } from '../utils/utils';
 
-export default store;
+// STORE
+export const configureStore = () => {
+  const persistedState = loadState();
+
+  const store = createStore(
+    rootReducer,
+    persistedState,
+    // eslint-disable-next-line no-underscore-dangle
+    window.__REDUX_DEVTOOLS_EXTENSION__ &&
+      // eslint-disable-next-line no-underscore-dangle
+      window.__REDUX_DEVTOOLS_EXTENSION__(),
+  );
+
+  store.subscribe(() => {
+    saveState({
+      filters: store.getState().filters,
+    });
+  });
+
+  return store;
+};

@@ -20,9 +20,7 @@ function JobList() {
   // HOOKS
   const dispatch = useDispatch();
   const currentFilters = useSelector(selectFilters);
-  const positions = useSelector((state) =>
-    selectVisiblePositions(state, currentFilters),
-  );
+  const positions = useSelector((state) => selectVisiblePositions(state));
 
   // HANDLER FOR ADDING A FILTER
   const handleAddFilter = (filter) => {

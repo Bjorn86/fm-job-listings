@@ -71,6 +71,7 @@
 - [React](https://react.dev/)
 - [Redux](https://redux.js.org/)
 - [React Redux](https://react-redux.js.org/)
+- [Reselect](https://www.npmjs.com/package/reselect)
 - [Storybook](https://storybook.js.org/)
 - [Husky](https://typicode.github.io/husky/)
 - [Commitizen](https://commitizen-tools.github.io/commitizen/)
@@ -81,7 +82,7 @@
 
 - Работе со state-менеджером Redux
 - Работе с Storybook
-- Закрепил знания о технологиях HTML, CSS, JS, React
+- Закрепил знания о технологиях HTML, SCSS, JS, React
 
 ## Автор
 
