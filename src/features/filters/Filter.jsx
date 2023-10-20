@@ -9,10 +9,10 @@ import Stack from '../../UI/Stack/Stack';
 import Badge from '../../UI/Badge/Badge';
 
 // IMPORT SELECTORS
-import { selectFilters } from '../../store/filters/filterSelectors';
+import { selectFilters } from './filterSelectors';
 
 // IMPORT ACTIONS
-import { removeFilter, clearFilters } from '../../store/filters/filterActions';
+import { removeFilter, clearFilters } from './filterSlice';
 
 // FILTER COMPONENT
 function Filter() {
@@ -40,7 +40,7 @@ function Filter() {
       <button
         className='filter__btn-clear'
         type='button'
-        onClick={() => dispatch(clearFilters)}
+        onClick={() => dispatch(clearFilters())}
       >
         Clear
       </button>

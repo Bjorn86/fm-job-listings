@@ -6,7 +6,7 @@ import './PageContent.scss';
 
 // IMPORT COMPONENTS
 import Header from '../Header/Header';
-import Filter from '../Filter/Filter';
+import Filter from '../../features/filters/Filter';
 
 // APP LAYOUT COMPONENT
 function PageContent({ children }) {
