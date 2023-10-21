@@ -12,6 +12,7 @@
   - [Screenshot](#screenshot)
   - [Директории проекта](#директории-проекта)
   - [Запуск проекта](#запуск-проекта)
+  - [Ветки проекта](#ветки-проекта)
   - [Ссылки](#ссылки)
 - [Ход выполнения проекта](#ход-выполнения-проекта)
   - [Используемые технологии](#используемые-технологии)
@@ -37,10 +38,9 @@
 
 - `src/assets` — директория со статичными файлами
 - `src/components` — директория с компонентами
-- `src/store` — директория с файлами state-менеджера
+- `src/features` — директория с фичами
 - `src/styles` — директория с глобальными стилями, переменными и миксинами
 - `src/UI` — директория с компонентами UI-kit
-- `src/utils` — директория со вспомогательными утилитами
 
 ### Запуск проекта
 
@@ -56,6 +56,11 @@
 - `npm run storybook` - запускает Storybook в режиме разработки
 - `npm run build-storybook` - запускает Storybook в режиме продакшн
 
+### Ветки проекта
+
+- `main` - [главная ветка. Версия с использованием Redux Toolkit](https://github.com/Bjorn86/fm-job-listings/tree/main)
+- `redux` - [версия с использованием Redux](https://github.com/Bjorn86/fm-job-listings/tree/redux)
+
 ### Ссылки
 
 - [Ссылка на репозиторий проекта](https://github.com/Bjorn86/fm-job-listings)
@@ -70,8 +75,8 @@
 - JS
 - [React](https://react.dev/)
 - [Redux](https://redux.js.org/)
-- [React Redux](https://react-redux.js.org/)
-- [Reselect](https://www.npmjs.com/package/reselect)
+- [React Toolkit](https://redux-toolkit.js.org/)
+- [Redux Persist](https://www.npmjs.com/package/redux-persist)
 - [Storybook](https://storybook.js.org/)
 - [Husky](https://typicode.github.io/husky/)
 - [Commitizen](https://commitizen-tools.github.io/commitizen/)
@@ -80,7 +85,7 @@
 
 ### Чему я научился работая над проектом
 
-- Работе со state-менеджером Redux
+- Работе со state-менеджерами Redux и Redux Toolkit
 - Работе с Storybook
 - Закрепил знания о технологиях HTML, SCSS, JS, React
 

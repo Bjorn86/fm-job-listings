@@ -10,6 +10,7 @@ The project is a one-line application that allows the user to find jobs in diffe
   - [Screenshot](#screenshot)
   - [Project Directories](#project-directories)
   - [Project start](#project-start)
+  - [Project branches](#project-branches)
   - [Links](#links)
 - [Project Progress](#project-progress)
   - [Technologies Used](#technologies-used)
@@ -35,10 +36,9 @@ To provide the user with information about job vacancies in different companies.
 
 - `src/assets` - directory with static files
 - `src/components` - directory with components
-- `src/store` - directory with state-manager files
+- `src/features` - directory with features
 - `src/styles` - directory with global styles, variables and mixins
 - `src/UI` - directory with UI-kit components
-- `src/utils` - directory with auxiliary utilities
 
 ### Project start
 
@@ -54,6 +54,11 @@ To provide the user with information about job vacancies in different companies.
 - `npm run storybook` - runs Storybook in development mode
 - `npm run build-storybook` - runs Storybook in production mode
 
+### Project branches
+
+- `main` - [main branch. Redux Toolkit version](https://github.com/Bjorn86/fm-job-listings/tree/main)
+- `redux` - [version using Redux](https://github.com/Bjorn86/fm-job-listings/tree/redux)
+
 ### Links
 
 - [Link to project repository](https://github.com/Bjorn86/fm-job-listings)
@@ -68,7 +73,8 @@ To provide the user with information about job vacancies in different companies.
 - JS
 - [React](https://react.dev/)
 - [Redux](https://redux.js.org/)
-- [React Redux](https://react-redux.js.org/)
+- [React Toolkit](https://redux-toolkit.js.org/)
+- [Redux Persist](https://www.npmjs.com/package/redux-persist)
 - [Storybook](https://storybook.js.org/)
 - [Husky](https://typicode.github.io/husky/)
 - [Commitizen](https://commitizen-tools.github.io/commitizen/)
@@ -77,7 +83,7 @@ To provide the user with information about job vacancies in different companies.
 
 ### What I learned
 
-- Working with Redux state manager
+- Working with Redux and Redux Toolkit state managers
 - Working with Storybook
 - I consolidated my knowledge of HTML, CSS, JS, React technologies.
 
