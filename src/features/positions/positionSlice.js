@@ -1,12 +1,18 @@
 // IMPORT PACKAGES
 import { createSlice } from '@reduxjs/toolkit';
 
+// INITIAL STATE
+const initialState = [];
+
 // POSITION SLICE
 const positionSlice = createSlice({
   name: '@@positions',
-  initialState: [],
+  initialState,
   reducers: {
-    addPositions: (_, action) => action.payload,
+    // eslint-disable-next-line arrow-body-style
+    addPositions: (_, action) => {
+      return action.payload;
+    },
   },
 });
 

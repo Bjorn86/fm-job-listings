@@ -9,9 +9,7 @@ import { selectFilters } from '../filters/filterSelectors';
 export const usePositions = () => {
   // HOOKS
   const currentFilters = useSelector(selectFilters);
-  const positions = useSelector((state) =>
-    selectVisiblePositions(state, currentFilters),
-  );
+  const positions = useSelector((state) => selectVisiblePositions(state));
 
   return {
     positions,
