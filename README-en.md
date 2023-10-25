@@ -73,7 +73,7 @@ To provide the user with information about job vacancies in different companies.
 - JS
 - [React](https://react.dev/)
 - [Redux](https://redux.js.org/)
-- [React Toolkit](https://redux-toolkit.js.org/)
+- [Redux Toolkit](https://redux-toolkit.js.org/)
 - [Redux Persist](https://www.npmjs.com/package/redux-persist)
 - [Storybook](https://storybook.js.org/)
 - [Husky](https://typicode.github.io/husky/)
